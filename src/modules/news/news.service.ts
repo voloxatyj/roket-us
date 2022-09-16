@@ -2,7 +2,6 @@ import { Injectable, Logger, HttpException, HttpStatus } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { News } from './news.entity';
-import { Category } from '../category/category.entity';
 import { getFormattedLikes } from '../../utils/getFormattedLikes';
 
 @Injectable()
