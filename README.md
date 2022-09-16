@@ -5,13 +5,13 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-## Please install dependencies
+# Please install dependencies
 
 ### yarn
 
-## Create .env file and copy variables that I left in .env.example or set your own
+# Create .env file and copy variables that I left in .env.example or set your own
 
-## Then run command
+# Then run command
 
 ### yarn start
 
