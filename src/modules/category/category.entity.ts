@@ -5,7 +5,7 @@ import {
   ManyToOne,
   Entity,
 } from 'typeorm';
-import { Story } from '../story/story.entity';
+import { News } from '../news/news.entity';
 
 @Entity('Category')
 export class Category {
@@ -18,6 +18,6 @@ export class Category {
   @CreateDateColumn({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' })
   createdBy: Date;
 
-  @ManyToOne(() => Story, (story) => story.id)
-  news: Story;
+  @ManyToOne(() => News, (news) => news.categories)
+  news!: News;
 }

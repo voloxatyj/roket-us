@@ -1,4 +1,9 @@
-import { PrimaryGeneratedColumn, Column, Entity } from 'typeorm';
+import {
+  PrimaryGeneratedColumn,
+  Column,
+  Entity,
+  CreateDateColumn,
+} from 'typeorm';
 
 @Entity('Story')
 export class Story {
@@ -16,4 +21,7 @@ export class Story {
 
   @Column()
   likes: number;
+
+  @CreateDateColumn({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' })
+  date: Date;
 }

@@ -1,12 +1,14 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Logger, Param } from '@nestjs/common';
 import { NewsService } from './news.service';
 
 @Controller('news')
 export class NewsController {
+  public logger = new Logger(NewsController.name);
+
   constructor(private readonly newsService: NewsService) {}
 
-  @Get('all')
-  getAllNews() {
-    return this.newsService.getAll();
+  @Get(':page')
+  getAllNews(@Param('page') page: string) {
+    return this.newsService.getAll(page);
   }
 }
